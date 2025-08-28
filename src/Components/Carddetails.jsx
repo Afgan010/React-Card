@@ -17,7 +17,7 @@ const Carddetails = () => {
           <p>{car.run} km</p>
         </div>
       ) : (
-        <p>Product not found</p>
+        <p>Mehsul Tapilmadi</p>
       )}
     </div>
   );
