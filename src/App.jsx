@@ -1,10 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import data from "./assets/db/data";
-import Card from "./Components/Card";
+
+import Cards from "./Components/Cards";
+import Carddetails from "./Components/Carddetails";
 
 const App = () => {
   return (
     <>
-      <Card data={data} />
+      <Routes>
+        <Route path="/" element={<Cards data={data} />} />
+        <Route path="/details/:id" element={<Carddetails />} />
+      </Routes>
     </>
   );
 };

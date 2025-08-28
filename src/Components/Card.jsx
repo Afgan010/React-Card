@@ -1,6 +1,6 @@
-import data from "../assets/db/data";
-
+import { useNavigate } from "react-router-dom";
 const Card = ({ data }) => {
+  const navigate = useNavigate();
   return (
     <div className="container">
       <div className="row">
@@ -12,6 +12,9 @@ const Card = ({ data }) => {
             <p className="year">{year}</p>
             <p className="vol">{vol} L</p>
             <p className="run">{run} km</p>
+            <button onClick={() => navigate(`/details/${id}`)}>
+              Detallara bax
+            </button>
           </div>
         ))}
       </div>
